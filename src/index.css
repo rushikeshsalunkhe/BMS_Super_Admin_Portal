@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Building Management System Design System */
+@layer base {
+  :root {
+    /* Core BMS Brand Colors */
+    --background: 220 20% 97%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* BMS Professional Blue/Teal Theme */
+    --primary: 200 95% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 200 95% 30%;
+    --primary-light: 200 95% 45%;
+
+    --secondary: 215 15% 95%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 215 15% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 165 80% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 35 95% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --success: 140 85% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 215 15% 88%;
+    --input: 215 15% 92%;
+    --ring: 200 95% 35%;
+
+    --radius: 0.75rem;
+
+    /* BMS Specific Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(200 95% 35%), hsl(180 85% 40%));
+    --gradient-secondary: linear-gradient(135deg, hsl(215 15% 96%), hsl(220 20% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(200 95% 35%) 0%, hsl(180 85% 40%) 50%, hsl(165 80% 40%) 100%);
+    
+    --shadow-card: 0 2px 8px -2px hsl(215 25% 15% / 0.08);
+    --shadow-elevated: 0 8px 24px -4px hsl(215 25% 15% / 0.12);
+    --shadow-glow: 0 0 0 1px hsl(200 95% 35% / 0.1);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Sidebar specific */
+    --sidebar-background: 215 25% 15%;
+    --sidebar-foreground: 215 15% 85%;
+    --sidebar-primary: 200 95% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 20% 20%;
+    --sidebar-accent-foreground: 215 15% 85%;
+    --sidebar-border: 215 20% 25%;
+    --sidebar-ring: 200 95% 35%;
+
+  }
+
+  .dark {
+    /* BMS Dark Mode */
+    --background: 215 25% 10%;
+    --foreground: 215 15% 85%;
+
+    --card: 215 25% 15%;
+    --card-foreground: 215 15% 85%;
+
+    --popover: 215 25% 15%;
+    --popover-foreground: 215 15% 85%;
+
+    --primary: 200 95% 45%;
+    --primary-foreground: 215 25% 10%;
+
+    --secondary: 215 20% 20%;
+    --secondary-foreground: 215 15% 85%;
+
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 165 80% 45%;
+    --accent-foreground: 215 25% 10%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 25%;
+    --input: 215 20% 22%;
+    --ring: 200 95% 45%;
+
+    --sidebar-background: 215 30% 8%;
+    --sidebar-foreground: 215 15% 80%;
+    --sidebar-primary: 200 95% 45%;
+    --sidebar-primary-foreground: 215 30% 8%;
+    --sidebar-accent: 215 25% 12%;
+    --sidebar-accent-foreground: 215 15% 80%;
+    --sidebar-border: 215 25% 15%;
+    --sidebar-ring: 200 95% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* BMS Custom Utility Classes */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}

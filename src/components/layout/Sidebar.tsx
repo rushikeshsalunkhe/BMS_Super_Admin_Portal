@@ -39,13 +39,19 @@ const menuItems: MenuItem[] = [
     title: 'User Management',
     href: '/users',
     icon: Users,
-    roles: ['super_admin', 'admin', 'secretary']
+    roles: ['super_admin', 'admin', 'developer']
+  },
+  {
+    title: 'Building Management',
+    href: '/buildings',
+    icon: Building2,
+    roles: ['super_admin', 'admin', 'developer']
   },
   {
     title: 'Visitor Management',
     href: '/visitors',
     icon: UserCheck,
-    roles: ['super_admin', 'admin', 'secretary', 'security']
+    roles: ['super_admin', 'admin', 'secretary', 'security', 'developer']
   },
   {
     title: 'Payments',

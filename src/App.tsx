@@ -8,7 +8,10 @@ import LoginForm from "@/components/auth/LoginForm";
 import MainLayout from "@/components/layout/MainLayout";
 import Dashboard from "@/pages/Dashboard";
 import UserManagement from "@/pages/UserManagement";
+import BuildingManagement from "@/pages/BuildingManagement";
 import VisitorManagement from "@/pages/VisitorManagement";
+import SystemMonitoring from "@/pages/SystemMonitoring";
+import Settings from "@/pages/Settings";
 import ComingSoon from "@/pages/ComingSoon";
 
 const queryClient = new QueryClient();
@@ -36,12 +39,13 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/users" element={<UserManagement />} />
+        <Route path="/buildings" element={<BuildingManagement />} />
         <Route path="/visitors" element={<VisitorManagement />} />
         <Route path="/payments" element={<ComingSoon title="Payments" />} />
         <Route path="/communication" element={<ComingSoon title="Communication" />} />
         <Route path="/maps" element={<ComingSoon title="Building Maps" />} />
-        <Route path="/monitoring" element={<ComingSoon title="System Monitoring" />} />
-        <Route path="/settings" element={<ComingSoon title="Settings" />} />
+        <Route path="/monitoring" element={<SystemMonitoring />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="/support" element={<ComingSoon title="Support" />} />
       </Routes>
     </MainLayout>
